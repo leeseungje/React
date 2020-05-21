@@ -4,9 +4,9 @@ class Subject extends Component {
     render() { // 함수 function 생략
     return ( // 
         <header>
-            <h1><a href="/" onClick={function(e) {
+            <h1><a href="/" onClick={function(e){
                 e.preventDefault();
-                this.state.mode = "welcome";
+                this.props.onChangePage();
             }.bind(this)}>{this.props.title}</a></h1>
             {this.props.sub}
         </header>
